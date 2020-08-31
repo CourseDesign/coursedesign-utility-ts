@@ -1,5 +1,12 @@
 const fs = require('fs');
-const required = require('./required');
+const path = require('path');
+
+function required(value) {
+  if (value == null) {
+    process.exit(1);
+  }
+  return value;
+}
 
 const rootPath = required(process.argv[2]);
 const packagePath = required(process.argv[3]);
