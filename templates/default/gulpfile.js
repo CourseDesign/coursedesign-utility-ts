@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require("path");
 
-const { src, dest, series } = require('gulp');
+const { src, dest, series, lastRun } = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const gulpif = require('gulp-if');
 const ts = require('gulp-typescript');
@@ -36,13 +36,32 @@ function getTsconfig(tsProject) {
   return getFinalTsConfig(tsProject.rawConfig, tsProject.projectDirectory)
 }
 
+function getTsFilenames(tsProject) {
+  const tsconfig = getTsconfig(tsProject);
+
+  const { fileNames, errors } = tsProject.typescript.parseJsonConfigFileContent(
+    tsconfig,
+    tsProject.typescript.sys,
+    path.resolve(tsProject.projectDirectory),
+    undefined,
+    tsProject.configFileName
+  );
+
+  for (const error of errors) {
+    console.error(error.messageText);
+  }
+
+  return fileNames;
+}
+
 const tsProject = ts.createProject(getTsconfigName());
 const tsconfig = getTsconfig(tsProject);
+const tsFilenames = getTsFilenames(tsProject);
 
 function compile() {
   const useSourcemaps = tsconfig.compilerOptions.sourceMap;
 
-  return tsProject.src()
+  return src(tsFilenames, { sourcemaps: true, since: lastRun(compile) })
     .pipe(gulpif(useSourcemaps, sourcemaps.init()))
     .pipe(tsProject())
     .pipe(gulpif(useSourcemaps, sourcemaps.write('.')))
@@ -52,7 +71,7 @@ function compile() {
 function compression() {
   const isProduction = process.env.NODE_ENV === 'production';
 
-  return src(path.join(tsconfig.compilerOptions.outDir, '**/*.js'))
+  return src(path.join(tsconfig.compilerOptions.outDir, '**/*.js'), { sourcemaps: true, since: lastRun(compression) })
     .pipe(gulpif(isProduction, sourcemaps.init()))
     .pipe(gulpif(isProduction, uglify()))
     .pipe(gulpif(isProduction, sourcemaps.write('.')))
