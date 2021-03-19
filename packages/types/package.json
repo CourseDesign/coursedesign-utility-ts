@@ -1,5 +1,5 @@
 {
-  "name": "@course-design/util-decorator",
+  "name": "@course-design/types",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
@@ -12,8 +12,8 @@
     "build": "npm run clean && npm run compile",
     "clean": "rm -rf ./dist",
     "compile": "gulp",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "eslint ",
+    "lint:fix": "eslint --fix ",
     "prepublishOnly": "npm run build:prd"
   }
 }
