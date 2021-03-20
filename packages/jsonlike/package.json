@@ -14,5 +14,11 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepublishOnly": "npm run build:prd"
+  },
+  "devDependencies": {
+    "@course-design/types": "^1.0.2"
+  },
+  "peerDependencies": {
+    "@course-design/types": "1.x"
   }
 }
