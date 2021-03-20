@@ -7,10 +7,10 @@ type Json =
   | JsonObject
   | JsonArray;
 
-interface JsonObject {
+export interface JsonObject {
   [x: string]: Json;
 }
 
-type JsonArray = Array<Json>;
+export type JsonArray = Array<Json>;
 
 export default Json;
