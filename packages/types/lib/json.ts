@@ -1,16 +1,16 @@
-type JsonValue =
+type Json =
   | string
   | number
   | boolean
   | null
   | undefined
-  | Json
+  | JsonObject
   | JsonArray;
 
-interface Json {
-  [x: string]: JsonValue;
+export interface JsonObject {
+  [x: string]: Json;
 }
 
-type JsonArray = Array<JsonValue>;
+export type JsonArray = Array<Json>;
 
 export default Json;
