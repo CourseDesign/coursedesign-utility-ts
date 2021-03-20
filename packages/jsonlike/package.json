@@ -17,7 +17,7 @@
     "prepublishOnly": "npm run build:prd"
   },
   "devDependencies": {
-    "@course-design/types": "^1.0.2"
+    "@course-design/types": "^1.0.3"
   },
   "peerDependencies": {
     "@course-design/types": "1.x"
