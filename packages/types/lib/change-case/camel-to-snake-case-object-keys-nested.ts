@@ -3,12 +3,16 @@ import { JsonObject } from "../json";
 
 type CamelToSnakeCaseKeys<T> = T extends JsonObject
   ? {
-      [K in keyof T as CamelToSnakeCase<K & string>]: CamelToSnakeCaseKeys<T[K]>;
+      [K in keyof T as CamelToSnakeCase<K & string>]: CamelToSnakeCaseKeys<
+        T[K]
+      >;
     }
   : T extends (infer J)[]
-    ? CamelToSnakeCaseKeys<J>[]
-    : T;
+  ? CamelToSnakeCaseKeys<J>[]
+  : T;
 
-type CamelToSnakeCaseObjectKeysNested<T extends JsonObject> = CamelToSnakeCaseKeys<T>;
+type CamelToSnakeCaseObjectKeysNested<
+  T extends JsonObject
+> = CamelToSnakeCaseKeys<T>;
 
 export default CamelToSnakeCaseObjectKeysNested;
