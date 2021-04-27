@@ -1,3 +1,3 @@
-type PascalToCamelCase<S extends string> = Uncapitalize<S>
+type PascalToCamelCase<S extends string> = Uncapitalize<S>;
 
-export default PascalToCamelCase
+export default PascalToCamelCase;
