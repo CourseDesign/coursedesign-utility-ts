@@ -7,5 +7,4 @@ export { default as Prev } from "./prev";
 export { default as Paths } from "./paths";
 export { default as Leaves } from "./leaves";
 
-export { default as CamelCase } from "./camel-case";
-export { default as SnakeCase } from "./snake-case";
+export * from "./change-case"
