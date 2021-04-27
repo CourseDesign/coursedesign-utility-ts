@@ -1,5 +1,8 @@
 import SnakeToCamelCase from "./snake-to-camel-case";
+import CamelToPascalCase from "./camel-to-pascal-case";
 
-type SnakeToPascalCase<S extends string> = Capitalize<SnakeToCamelCase<S>>;
+type SnakeToPascalCase<S extends string> = CamelToPascalCase<
+  SnakeToCamelCase<S>
+>;
 
 export default SnakeToPascalCase;

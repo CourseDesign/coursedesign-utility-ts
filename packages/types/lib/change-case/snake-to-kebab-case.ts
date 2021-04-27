@@ -1,6 +1,7 @@
-import CamelToKebabCase from "./camel-to-kebab-case";
-import SnakeToCamelCase from "./snake-to-camel-case";
-
-type SnakeToKebabCase<S extends string> = CamelToKebabCase<SnakeToCamelCase<S>>;
+type SnakeToKebabCase<
+  S extends string
+> = S extends `${infer P1}_${infer P2}${infer P3}`
+  ? `${P1}-${P2}${SnakeToKebabCase<P3>}`
+  : S;
 
 export default SnakeToKebabCase;
