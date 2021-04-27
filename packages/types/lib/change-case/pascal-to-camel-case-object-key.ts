@@ -1,7 +1,7 @@
 import PascalToCamelCase from "./pascal-to-camel-case";
+import { JsonObject } from "../json";
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type PascalToCamelCaseObjectKey<T> = T extends object
+type PascalToCamelCaseObjectKey<T> = T extends JsonObject
   ? {
       [K in keyof T as PascalToCamelCase<
         K & string

@@ -1,7 +1,7 @@
 import KebabToCamelCase from "./kebab-to-camel-case";
+import { JsonObject } from "../json";
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type KebabToCamelCaseObjectKey<T> = T extends object
+type KebabToCamelCaseObjectKey<T> = T extends JsonObject
   ? {
       [K in keyof T as KebabToCamelCase<K & string>]: KebabToCamelCaseObjectKey<
         T[K]

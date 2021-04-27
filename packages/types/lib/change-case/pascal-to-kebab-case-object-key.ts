@@ -1,7 +1,7 @@
 import PascalToKebabCase from "./pascal-to-kebab-case";
+import { JsonObject } from "../json";
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type PascalToKebabCaseObjectKey<T> = T extends object
+type PascalToKebabCaseObjectKey<T> = T extends JsonObject
   ? {
       [K in keyof T as PascalToKebabCase<
         K & string

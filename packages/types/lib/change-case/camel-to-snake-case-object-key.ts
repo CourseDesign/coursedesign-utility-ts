@@ -1,7 +1,7 @@
 import CamelToSnakeCase from "./camel-to-snake-case";
+import { JsonObject } from "../json";
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type CamelToSnakeCaseObjectKey<T> = T extends object
+type CamelToSnakeCaseObjectKey<T> = T extends JsonObject
   ? {
       [K in keyof T as CamelToSnakeCase<K & string>]: CamelToSnakeCaseObjectKey<
         T[K]

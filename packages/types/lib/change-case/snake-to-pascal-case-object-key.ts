@@ -1,7 +1,7 @@
 import SnakeToPascalCase from "./snake-to-pascal-case";
+import { JsonObject } from "../json";
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type SnakeToPascalCaseObjectKey<T> = T extends object
+type SnakeToPascalCaseObjectKey<T> = T extends JsonObject
   ? {
       [K in keyof T as SnakeToPascalCase<
         K & string
