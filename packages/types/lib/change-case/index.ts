@@ -14,18 +14,18 @@ export { default as KebabToCamelCase } from "./kebab-to-camel-case";
 export { default as KebabToSnakeCase } from "./kebab-to-snake-case";
 export { default as KebabToPascalCase } from "./kebab-to-pascal-case";
 
-export { default as CamelToKebabCaseObjectKeysNested } from "./camel-to-kebab-case-object-keys-nested";
-export { default as CamelToPascalCaseObjectKeysNested } from "./camel-to-pascal-case-object-keys-nested";
-export { default as CamelToSnakeCaseObjectKeysNested } from "./camel-to-snake-case-object-keys-nested";
+export { default as CamelToKebabCaseKeys } from "./camel-to-kebab-case-keys";
+export { default as CamelToPascalCaseKeys } from "./camel-to-pascal-case-keys";
+export { default as CamelToSnakeCaseKeys } from "./camel-to-snake-case-keys";
 
-export { default as KebabToCamelCaseObjectKeysNested } from "./kebab-to-camel-case-object-keys-nested";
-export { default as KebabToPascalCaseObjectKeysNested } from "./kebab-to-pascal-case-object-keys-nested";
-export { default as KebabToSnakeCaseObjectKeysNested } from "./kebab-to-snake-case-object-keys-nested";
+export { default as KebabToCamelCaseKeys } from "./kebab-to-camel-case-keys";
+export { default as KebabToPascalCaseKeys } from "./kebab-to-pascal-case-keys";
+export { default as KebabToSnakeCaseKeys } from "./kebab-to-snake-case-keys";
 
-export { default as PascalToCamelCaseObjectKeysNested } from "./pascal-to-camel-case-object-keys-nested";
-export { default as PascalToKebabCaseObjectKeysNested } from "./pascal-to-kebab-case-object-keys-nested";
-export { default as PascalToSnakeCaseObjectKeysNested } from "./pascal-to-snake-case-object-keys-nested";
+export { default as PascalToCamelCaseKeys } from "./pascal-to-camel-case-keys";
+export { default as PascalToKebabCaseKeys } from "./pascal-to-kebab-case-keys";
+export { default as PascalToSnakeCaseKeys } from "./pascal-to-snake-case-keys";
 
-export { default as SnakeToCamelCaseObjectKeysNested } from "./snake-to-camel-case-object-keys-nested";
-export { default as SnakeToKebabCaseObjectKeysNested } from "./snake-to-kebab-case-object-keys-nested";
-export { default as SnakeToPascalCaseObjectKeysNested } from "./snake-to-pascal-case-object-keys-nested";
+export { default as SnakeToCamelCaseKeys } from "./snake-to-camel-case-keys";
+export { default as SnakeToKebabCaseKeys } from "./snake-to-kebab-case-keys";
+export { default as SnakeToPascalCaseKeys } from "./snake-to-pascal-case-keys";
