@@ -9,3 +9,7 @@ export { default as CamelToPascalCase } from "./camel-to-pascal-case";
 export { default as PascalToCamelCase } from "./pascal-to-camel-case";
 export { default as PascalToSnakeCase } from "./pascal-to-snake-case";
 export { default as PascalToKebabCase } from "./pascal-to-kebab-case";
+
+export { default as KebabToCamelCase } from "./kebab-to-camel-case";
+export { default as KebabToSnakeCase } from "./kebab-to-snake-case";
+export { default as KebabToPascalCase } from "./kebab-to-pascal-case";
