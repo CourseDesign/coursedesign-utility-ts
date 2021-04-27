@@ -34,3 +34,8 @@ export { default as IsCamelCase } from "./is-camel-case";
 export { default as IsKebabCase } from "./is-kebab-case";
 export { default as IsSnakeCase } from "./is-snake-case";
 export { default as IsPascalCase } from "./is-pascal-case";
+
+export { default as CamelCase } from "./camel-case";
+export { default as SnakeCase } from "./snake-case";
+export { default as KebabCase } from "./kebab-case";
+export { default as PascalCase } from "./pascal-case";
