@@ -7,4 +7,4 @@ export { default as Prev } from "./prev";
 export { default as Paths } from "./paths";
 export { default as Leaves } from "./leaves";
 
-export * from "./change-case"
+export * from "./change-case";
