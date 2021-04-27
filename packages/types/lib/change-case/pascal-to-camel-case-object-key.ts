@@ -1,12 +1,14 @@
 import PascalToCamelCase from "./pascal-to-camel-case";
 import { JsonObject } from "../json";
 
-type PascalToCamelCaseObjectKey<T> = T extends JsonObject
+type PascalToCamelCaseKey<T> = T extends JsonObject
   ? {
-      [K in keyof T as PascalToCamelCase<
-        K & string
-      >]: PascalToCamelCaseObjectKey<T[K]>;
+      [K in keyof T as PascalToCamelCase<K & string>]: PascalToCamelCaseKey<
+        T[K]
+      >;
     }
   : T;
+
+type PascalToCamelCaseObjectKey<T extends JsonObject> = PascalToCamelCaseKey<T>;
 
 export default PascalToCamelCaseObjectKey;

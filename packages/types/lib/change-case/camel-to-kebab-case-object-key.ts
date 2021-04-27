@@ -1,12 +1,12 @@
 import CamelToKebabCase from "./camel-to-kebab-case";
 import { JsonObject } from "../json";
 
-type CamelToKebabCaseObjectKey<T> = T extends JsonObject
+type CamelToKebabCaseKey<T> = T extends JsonObject
   ? {
-      [K in keyof T as CamelToKebabCase<K & string>]: CamelToKebabCaseObjectKey<
-        T[K]
-      >;
+      [K in keyof T as CamelToKebabCase<K & string>]: CamelToKebabCaseKey<T[K]>;
     }
   : T;
+
+type CamelToKebabCaseObjectKey<T extends JsonObject> = CamelToKebabCaseKey<T>;
 
 export default CamelToKebabCaseObjectKey;
