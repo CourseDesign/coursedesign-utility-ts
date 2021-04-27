@@ -29,3 +29,8 @@ export { default as PascalToSnakeCaseKeys } from "./pascal-to-snake-case-keys";
 export { default as SnakeToCamelCaseKeys } from "./snake-to-camel-case-keys";
 export { default as SnakeToKebabCaseKeys } from "./snake-to-kebab-case-keys";
 export { default as SnakeToPascalCaseKeys } from "./snake-to-pascal-case-keys";
+
+export { default as IsCamelCase } from "./is-camel-case";
+export { default as IsKebabCase } from "./is-kebab-case";
+export { default as IsSnakeCase } from "./is-snake-case";
+export { default as IsPascalCase } from "./is-pascal-case";
