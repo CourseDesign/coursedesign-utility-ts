@@ -6,3 +6,6 @@ export { default as isDeserializable } from "./is-deserializable";
 
 export { default as Serializer } from "./serializer";
 export { default as Deserializer } from "./deserializer";
+
+export { default as serialize } from "./serialize";
+export { default as deserialize } from "./deserialize";
