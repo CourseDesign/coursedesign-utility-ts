@@ -20,6 +20,6 @@
     "@course-design/types": "^1.1.2"
   },
   "peerDependencies": {
-    "@course-design/types": "1.x"
+    "@course-design/types": "^1.1.2"
   }
 }
