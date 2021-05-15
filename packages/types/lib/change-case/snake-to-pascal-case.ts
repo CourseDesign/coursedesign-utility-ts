@@ -1,4 +1,4 @@
-import SnakeToCamelCase from "./snake-to-camel-case";
+ㅊimport SnakeToCamelCase from "./snake-to-camel-case";
 import CamelToPascalCase from "./camel-to-pascal-case";
 
 type SnakeToPascalCase<S extends string> = CamelToPascalCase<

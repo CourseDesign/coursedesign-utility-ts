@@ -1,5 +1,4 @@
-import Json, { JsonObject } from "../core/json";
-import Prev from "../core/prev";
+import { Json, JsonObject, Prev } from "../core";
 import SnakeToCamelCase from "./snake-to-camel-case";
 
 type SnakeToCamelCaseKeys<T extends Json, D extends number = -1> = [D] extends [
