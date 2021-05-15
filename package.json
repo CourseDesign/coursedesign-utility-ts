@@ -16,7 +16,7 @@
     "package:init": "./scripts/init-package.sh",
     "package:sort": "sort-package-json \"**/package.json\"",
     "package:update": "lernaupdate",
-    "postinstall": "husky install",
+    "_postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
