@@ -1,5 +1,5 @@
-import Json, { JsonObject } from "../json";
-import Prev from "../prev";
+import Json, { JsonObject } from "../core/json";
+import Prev from "../core/prev";
 import KebabCase from "./kebab-case";
 
 type KebabCaseKeys<T extends Json, D extends number = -1> = [D] extends [0]
