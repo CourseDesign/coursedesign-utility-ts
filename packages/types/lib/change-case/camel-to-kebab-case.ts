@@ -1,4 +1,4 @@
-import Alphabet from "../alphabet";
+import { Alphabet } from "../core";
 
 type CamelToKebabCase<S extends string> = S extends `${infer T}${infer U}`
   ? `${T extends Capitalize<T> & Alphabet

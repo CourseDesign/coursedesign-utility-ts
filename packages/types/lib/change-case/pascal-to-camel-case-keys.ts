@@ -1,5 +1,4 @@
-import Json, { JsonObject } from "../json";
-import Prev from "../prev";
+import { Json, JsonObject, Prev } from "../core";
 import PascalToCamelCase from "./pascal-to-camel-case";
 
 type PascalToCamelCaseKeys<T extends Json, D extends number = -1> = [
