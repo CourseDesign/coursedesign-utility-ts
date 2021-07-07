@@ -1,6 +1,6 @@
 {
   "name": "jsonlike",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "",
   "license": "ISC",
   "author": "",
@@ -16,7 +16,7 @@
     "prepublishOnly": "cross-env NODE_ENV=production npm run build"
   },
   "devDependencies": {
-    "@course-design/types": "^1.2.0"
+    "@course-design/types": "^1.2.1"
   },
   "peerDependencies": {
     "@course-design/types": "^1.2.1"
