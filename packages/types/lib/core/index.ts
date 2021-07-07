@@ -9,3 +9,4 @@ export { default as Prev } from "./prev";
 export { default as Paths } from "./paths";
 export { default as Leaves } from "./leaves";
 export { default as Alphabet } from "./alphabet";
+export { default as Difference } from "./difference";
