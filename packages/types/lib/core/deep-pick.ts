@@ -9,7 +9,7 @@ type InternalDeepPick<T, K extends string> = T extends object
         ? T[P]
         : InternalDeepPick<T[P], NodePaths<K>>;
     }
-  : never;
+  : T;
 
 type DeepPick<T, K extends Paths<T, 5>> = InternalDeepPick<T, K>;
 
