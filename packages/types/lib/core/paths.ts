@@ -1,7 +1,10 @@
 import Join from "./join";
 import Prev from "./prev";
+import Primitive from "./primitive";
 
 type Paths<T, D extends number = 10> = [D] extends [never]
+  ? never
+  : T extends Primitive
   ? never
   : // eslint-disable-next-line @typescript-eslint/ban-types
   T extends object

@@ -1,5 +1,7 @@
 export { default as Type } from "./type";
+export { default as DeepPick } from "./deep-pick";
 export { default as DeepPartial } from "./deep-partial";
+export { default as Primitive } from "./primitive";
 export { default as Nullish } from "./nullish";
 export { default as Json, JsonObject, JsonArray } from "./json";
 export { default as Join } from "./join";
