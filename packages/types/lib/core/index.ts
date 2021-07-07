@@ -5,6 +5,7 @@ export { default as DeepPick } from "./deep-pick";
 export { default as DeepPartial } from "./deep-partial";
 
 export { default as Difference } from "./difference";
+export { default as Equals } from "./equals";
 
 export { default as Primitive } from "./primitive";
 export { default as Alphabet } from "./alphabet";

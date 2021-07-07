@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
+import Equals from "./equals";
+
 type RemoveUnused<T> = T extends object
   ? {
-      [P in keyof T as [T[P]] extends [never]
+      [P in keyof T as Equals<T[P], never> extends true
         ? never
-        : T[P] extends undefined
+        : Equals<T[P], undefined> extends true
         ? never
         : P]: T[P];
     }
@@ -15,7 +17,7 @@ type Difference<T, U> = T extends object
     ? RemoveUnused<
         {
           [P in keyof T]: P extends Extract<keyof T, keyof U>
-            ? U[P] extends T[P]
+            ? Equals<T[P], U[P]> extends true
               ? never
               : Difference<T[P], U[P]>
             : T[P];
